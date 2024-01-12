@@ -1,0 +1,26 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Monitoramento"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Custom="using:Windows.UI.Xaml.Controls.Maps" x:Name="loginPage"
+    x:Class="Monitoramento.MainPage"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" d:DesignHeight="675" d:DesignWidth="605">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="146*"/>
+            <RowDefinition Height="152*"/>
+            <RowDefinition Height="152*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="125*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="Title" Margin="52,22,35,22" TextWrapping="Wrap" Text="Monitoramento" FontSize="72" d:LayoutOverrides="Height, TopPosition, BottomPosition" MaxWidth="518" MaxHeight="100"/>
+        <TextBox x:Name="Username" Margin="95,73,95,39" Grid.Row="1" Text="" MaxWidth="415" MaxHeight="40" VerticalContentAlignment="Bottom" MaxLength="50" BorderThickness="0,0,0,3" FontSize="18" Padding="10,3,6,1" PlaceholderText="Usuarios" TextChanged="Username_TextChanged"/>
+        <PasswordBox x:Name="passwordBox" Margin="94,44,95,68" Grid.Row="2" d:LayoutOverrides="LeftPosition, RightPosition" MaxWidth="416" MaxHeight="40" Padding="10,3,6,1" VerticalContentAlignment="Bottom" FontSize="18" MaxLength="8" BorderThickness="0,0,0,3" PlaceholderText="Senha" PasswordChanged="passwordBox_PasswordChanged"/>
+        <Button x:Name="loguinBtn" Content="Logar" Margin="94,10,95,0" Grid.Row="3" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="50" d:LayoutOverrides="Height" Click="loguinBtn_Click"/>
+        <RadioButton x:Name="termosRb" Content="Comcorda com os Termos de Serviço" Margin="170,31,0,0" Grid.Row="4" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment" Checked="termosRb_Checked" Click="termosRb_Click"/>
+    </Grid>
+</Page>
